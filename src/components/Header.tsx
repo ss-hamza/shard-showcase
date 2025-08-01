@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const navItems = [
-    { label: "How it works", href: "#how-it-works" },
+    { label: "How it works", href: "/how-it-works" },
     { label: "The Science", href: "#science" },
     { label: "Pricing", href: "#pricing" },
     { label: "FAQ", href: "#faq" },
