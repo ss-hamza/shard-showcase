@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Activity, Brain, Users } from "lucide-react";
+import { CheckCircle, Activity, Brain, Users, TrendingUp, Dna } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import elderlyConsultation from "@/assets/elderly-consultation.jpg";
@@ -9,6 +9,9 @@ import healthApp from "@/assets/health-app.jpg";
 import aiSupport from "@/assets/ai-support.jpg";
 import doctorConsultation from "@/assets/doctor-consultation.jpg";
 import familyHero from "@/assets/family-hero.jpg";
+import dnaGenetics from "@/assets/dna-genetics.jpg";
+import intergenerationalHealth from "@/assets/intergenerational-health.jpg";
+import lifestyleCoaching from "@/assets/lifestyle-coaching.jpg";
 
 const HowItWorks = () => {
   return (
@@ -16,48 +19,122 @@ const HowItWorks = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${familyHero})` }}
-        >
-          <div className="absolute inset-0 bg-navy/80"></div>
-        </div>
-        <div className="container mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Your brain has a future.
-            <br />
-            Let's make sure it's a strong one.
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto text-center">
+          <div className="inline-block bg-navy text-white px-6 py-3 rounded-full mb-8">
+            Three Steps to Rewrite Your Future
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-navy mb-8">
+            Decode. Predict. Prevent.
           </h1>
-          <p className="text-xl text-white/90 mb-8 max-w-4xl mx-auto">
-            You have the biology. We have the science. Together we have the opportunity 
-            to protect your memories, your independence, and the people you love.
+          <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto">
+            Biohack Genomics is the most cutting-edge platform available—integrating your genetics, lab 
+            data, and lifestyle with the latest in AI and neuroscience to target Alzheimer's prevention. We 
+            decode your biology, predict your personal risk, and deliver a science-backed plan designed to 
+            change your future.
           </p>
-          <p className="text-lg text-white/80 mb-8">
-            Your future isn't fixed. Let's shape it, together.
-          </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90">
-            Get Started
-          </Button>
+          
+          {/* Three Steps Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 text-center border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 bg-navy rounded-lg flex items-center justify-center">
+                    <Dna className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">
+                  Step 1: Complete Your Brain Health Profile, Genetics and Lab Testing
+                </h3>
+                <Button className="bg-primary hover:bg-primary/90 mt-4">
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 text-center border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 bg-navy rounded-lg flex items-center justify-center">
+                    <TrendingUp className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">
+                  Step 2: Get Your Personalized Risk Report & Prevention Plan
+                </h3>
+                <Button className="bg-primary hover:bg-primary/90 mt-4">
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-8 text-center border-2 hover:shadow-lg transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex justify-center mb-6">
+                  <div className="w-16 h-16 bg-navy rounded-lg flex items-center justify-center">
+                    <Activity className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-navy mb-4">
+                  Step 3: Prevent Alzheimer's & Dementia
+                </h3>
+                <Button className="bg-primary hover:bg-primary/90 mt-4">
+                  Learn More
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
-      {/* Step 1: Actionable Plan */}
+      {/* Step 1 Overview */}
+      <section className="py-20 px-4 bg-navy text-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center">
+                <Dna className="w-10 h-10 text-navy" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Step 1 Overview</h2>
+            <p className="text-white/80">Let's dive a bit deeper into Step 1: Completing your Brain Health Profile, Genetics and Lab Testing</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Genetic Analysis Section */}
       <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div>
               <h2 className="text-4xl font-bold text-navy mb-6">
-                Receive an Actionable Plan
-                <br />
-                Based on You
+                See What Your Genes Say About Your Brain
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Once we've analyzed your genetics, biomarkers, and lifestyle, you'll get a 
-                personalized prevention plan—targeting the specific factors driving your 
-                risk. From supplements to daily habits, every recommendation is tailored to 
-                help you lower your Alzheimer's risk with precision.
+                We analyze over 600 genetic SNPs linked to Alzheimer's, creating the most 
+                comprehensive cognitive risk profile available today. This includes not just 
+                APOE4, but a wide range of variants that impact inflammation, metabolism, 
+                detox, neuroprotection, and more—giving you a deep, personalized view of 
+                where your risks lie and how to reduce them.
               </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="font-semibold text-navy mb-3">Your Genes Shape the Entire Strategy</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Your genetic profile reveals where you're most vulnerable—and where targeted 
+                    action can have the greatest impact. It's the foundation that guides everything else.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-navy mb-3">Where AI Thrives</h4>
+                  <p className="text-muted-foreground text-sm">
+                    This is the kind of deep, multi-layered analysis that only AI can deliver—
+                    scanning over 600 genetic variants, cross-referencing thousands of studies.
+                  </p>
+                </div>
+              </div>
+
               <div className="flex gap-4">
                 <Button variant="outline" size="lg">Learn More</Button>
                 <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started</Button>
@@ -65,59 +142,103 @@ const HowItWorks = () => {
             </div>
             <div className="relative">
               <img 
-                src={elderlyConsultation} 
-                alt="Personalized consultation" 
+                src={dnaGenetics} 
+                alt="DNA genetic analysis visualization" 
                 className="rounded-2xl w-full"
               />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Detailed Features */}
+      {/* Blood Biomarkers Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-navy mb-6">
+                We Track the Blood Biomarkers That Matter Most for Alzheimer's
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                We analyze over 30 key blood biomarkers—like inflammation, insulin 
+                resistance, and neurodegeneration indicators—to uncover early warning 
+                signs and guide targeted prevention.
+              </p>
+              <p className="text-muted-foreground mb-8">
+                If you have your recent bloodwork, you'll be able to upload those into your 
+                profile for analysis. Or, you can order your panel through us and get it done 
+                at a local Labcorp location (typically at a nearby Walgreens or CVS).
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                  <h4 className="font-semibold text-navy mb-3">Easy To Do</h4>
+                  <p className="text-muted-foreground text-sm">
+                    We offer a variety of ways to get your labs, typically done at your local 
+                    Walgreens or CVS Labcorp location. Or, if you already have your labs, you can 
+                    enter them into your profile for analysis.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-navy mb-3">More Than Alzheimer's Prevention</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Our biomarker analysis doesn't just target Alzheimer's—it also uncovers 
+                    hidden health risks and early warning signs across your whole body.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="bg-primary hover:bg-primary/90">Sign Up</Button>
+              </div>
+            </div>
             <div className="relative">
               <img 
-                src={doctorPatient} 
-                alt="Doctor and patient consultation" 
+                src={intergenerationalHealth} 
+                alt="Health tracking and biomarker analysis" 
                 className="rounded-2xl w-full"
               />
             </div>
-            <div className="space-y-8">
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <Activity className="text-primary w-6 h-6" />
-                  <h3 className="text-xl font-semibold text-navy">Supplementation</h3>
-                </div>
-                <p className="text-muted-foreground">
-                  We identify exactly what your body needs and make the necessary supplement 
-                  recommendations—guided by biomarker and genetic analysis. And unlike most 
-                  platforms, Biohack Genomics doesn't sell supplements or profit from them, so 
-                  every recommendation is 100% unbiased and made in your best interest.
-                </p>
-              </div>
+          </div>
+        </div>
+      </section>
 
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <Brain className="text-primary w-6 h-6" />
-                  <h3 className="text-xl font-semibold text-navy">Custom Workouts and Meal Plans</h3>
+      {/* Lifestyle Assessment Section */}
+      <section className="py-20 px-4 bg-background">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img 
+                src={lifestyleCoaching} 
+                alt="Lifestyle coaching and assessment" 
+                className="rounded-2xl w-full"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-navy mb-6">
+                Lifestyle Accounts for up to 40% of Alzheimer's Risk
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Up to 40% of Alzheimer's cases are linked to lifestyle and environmental 
+                factors, and the good news is it's highly modifiable. Our 15 minute, science 
+                backed questionnaire uncovers the hidden risks in your daily habits—so 
+                you can take action before symptoms ever start.
+              </p>
+              
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-primary w-5 h-5 mt-1" />
+                  <span>Identify key areas for health improvement.</span>
                 </div>
-                <p className="text-muted-foreground">
-                  We design personal exercise and nutrition plans to reduce inflammation, 
-                  optimize metabolism, and support long-term cognitive function. Every 
-                  recommendation is completely personalized—because what works for others 
-                  may not work for you.
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <Users className="text-primary w-6 h-6" />
-                  <h3 className="text-xl font-semibold text-navy">Lifestyle Enhancements</h3>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-primary w-5 h-5 mt-1" />
+                  <span>Receive actionable insights for better living.</span>
                 </div>
-                <p className="text-muted-foreground">
-                  We pinpoint the daily habits contributing to your Alzheimer's risk. Then we guide 
-                  you through science-backed changes proven to protect brain health and lower 
-                  that risk over time.
-                </p>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="text-primary w-5 h-5 mt-1" />
+                  <span>Empower yourself with personalized health strategies.</span>
+                </div>
               </div>
 
               <div className="flex gap-4">
@@ -129,23 +250,40 @@ const HowItWorks = () => {
         </div>
       </section>
 
-      {/* Step 2: Risk Assessment */}
-      <section className="py-20 px-4 bg-muted/30">
+      {/* Step 2 Overview */}
+      <section className="py-20 px-4 bg-navy text-white">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center">
+                <TrendingUp className="w-10 h-10 text-navy" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold mb-4">Step 2 Overview</h2>
+            <p className="text-white/80">Let's dive a bit deeper into Step 2: Receiving Your Personalized Risk Report and Prevention Plan</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Risk Assessment */}
+      <section className="py-20 px-4 bg-background">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-navy mb-6">
-                Find Out How Much You 
-                Can Lower Your Risk
+                Find Out Your Pre-Intervention Risk
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                At the end of your report, you'll see more than just where you stand—you'll 
-                see where you could go. After identifying the genetic, biomarker, and 
-                lifestyle factors contributing to your Alzheimer's risk, our system models a 
-                new, projected risk estimate based on your personalized prevention plan. 
-                This future-facing score shows how much your risk could drop if you follow 
-                the recommended changes—giving you a clear, motivating picture of the...
+                Before making any changes, it's crucial to understand where you stand. Our 
+                system analyzes your genetics, blood biomarkers, and lifestyle to calculate 
+                your current lifetime risk of developing Alzheimer's. This pre-intervention 
+                baseline gives you a clear picture of what's driving your risk—and sets the 
+                stage for tracking your progress as you take action.
               </p>
+              <div className="flex gap-4">
+                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="bg-primary hover:bg-primary/90">Get Started</Button>
+              </div>
             </div>
             <div className="relative">
               <img 
@@ -153,6 +291,72 @@ const HowItWorks = () => {
                 alt="Risk assessment consultation" 
                 className="rounded-2xl w-full"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Actionable Plan Section */}
+      <section className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <img 
+                src={doctorPatient} 
+                alt="Personalized prevention plan" 
+                className="rounded-2xl w-full"
+              />
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-navy mb-6">
+                Receive an Actionable Plan Based on You
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                Once we've analyzed your genetics, biomarkers, and lifestyle, you'll get a 
+                personalized prevention plan—targeting the specific factors driving your 
+                risk. From supplements to daily habits, every recommendation is tailored to 
+                help you lower your Alzheimer's risk with precision.
+              </p>
+              
+              <div className="space-y-6 mb-8">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Activity className="text-primary w-6 h-6" />
+                    <h3 className="text-xl font-semibold text-navy">Supplementation</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We identify exactly what your body needs and make the necessary supplement 
+                    recommendations—guided by biomarker and genetic analysis.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Brain className="text-primary w-6 h-6" />
+                    <h3 className="text-xl font-semibold text-navy">Custom Workouts and Meal Plans</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We design personal exercise and nutrition plans to reduce inflammation, 
+                    optimize metabolism, and support long-term cognitive function.
+                  </p>
+                </div>
+
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <Users className="text-primary w-6 h-6" />
+                    <h3 className="text-xl font-semibold text-navy">Lifestyle Enhancements</h3>
+                  </div>
+                  <p className="text-muted-foreground">
+                    We pinpoint the daily habits contributing to your Alzheimer's risk and guide 
+                    you through science-backed changes.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <Button variant="outline" size="lg">Learn More</Button>
+                <Button size="lg" className="bg-primary hover:bg-primary/90">Sign Up</Button>
+              </div>
             </div>
           </div>
         </div>
